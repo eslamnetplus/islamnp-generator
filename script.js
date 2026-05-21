@@ -1,21 +1,25 @@
-function generateDesign() {
-  const phone = document.getElementById('phoneInput').value;
-  const network = document.getElementById('networkInput').value;
+function updateDesign() {
+  const phone = document.getElementById("phoneInput").value.trim();
+  const network = document.getElementById("networkInput").value.trim();
 
-  if(phone) {
-    document.getElementById('phoneText').innerText = phone;
-  }
+  document.getElementById("phoneText").textContent =
+    phone || "777000000";
 
-  if(network) {
-    document.getElementById('networkText').innerText = network;
-  }
+  document.getElementById("networkText").textContent =
+    network || "اسم الشبكة";
 }
 
-function downloadImage() {
-  html2canvas(document.querySelector(".poster")).then(canvas => {
+function downloadDesign() {
+  const design = document.getElementById("design");
+
+  html2canvas(design, {
+    scale: 3,
+    useCORS: true,
+    backgroundColor: null
+  }).then((canvas) => {
     const link = document.createElement("a");
-    link.download = "islamnp-design.png";
-    link.href = canvas.toDataURL();
+    link.download = "islam-net-plus-design.png";
+    link.href = canvas.toDataURL("image/png");
     link.click();
   });
 }
