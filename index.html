@@ -1,2 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مولد تصميم إسلام نت بلس</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div class="app">
+    <img src="assets/logo.png" class="logo">
+
+    <h1>مولد تصميم كبينة الواي فاي</h1>
+
+    <input type="text" id="phoneInput" placeholder="أدخل رقم الهاتف">
+    <input type="text" id="networkInput" placeholder="أدخل اسم الشبكة">
+
+    <button onclick="generateDesign()">إنشاء التصميم</button>
+
+    <div id="designArea">
+      <div class="poster">
+        <img src="assets/home-ui.jpg" class="home-ui">
+        <img src="assets/wifi-ui.jpg" class="wifi-ui">
+        <img src="assets/wifi-icon.jpg" class="wifi-icon">
+
+        <div id="phoneText">770000000</div>
+        <div id="networkText">اسم الشبكة</div>
+
+        <img src="assets/qr.png" class="qr">
+      </div>
+    </div>
+
+    <button id="downloadBtn" onclick="downloadImage()">تحميل التصميم</button>
+  </div>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
 
