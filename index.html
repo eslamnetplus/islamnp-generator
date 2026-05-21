@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مولد تصميم إسلام نت بلس</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مولد تصاميم اسلام نت بلس</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="app">
+<div class="container">
+
+  <header class="header">
     <img src="assets/logo.png" class="logo">
+    <h1>أنشئ إعلان شبكتك خلال ثوانٍ</h1>
+    <p>أدخل بياناتك وسيتم إنشاء تصميم احترافي جاهز للتنزيل</p>
+  </header>
 
-    <h1>مولد تصميم كبينة الواي فاي</h1>
-
+  <section class="form-box">
     <input type="text" id="phoneInput" placeholder="أدخل رقم الهاتف">
     <input type="text" id="networkInput" placeholder="أدخل اسم الشبكة">
 
-    <button onclick="generateDesign()">إنشاء التصميم</button>
+    <button onclick="updateDesign()">تحديث التصميم</button>
+    <button onclick="downloadDesign()">تحميل التصميم</button>
+  </section>
 
-    <div id="designArea">
-      <div class="poster">
-        <img src="assets/home-ui.jpg" class="home-ui">
-        <img src="assets/wifi-ui.jpg" class="wifi-ui">
-        <img src="assets/wifi-icon.jpg" class="wifi-icon">
+  <section class="preview-section">
+    <div id="design" class="design-card">
 
-        <div id="phoneText">770000000</div>
-        <div id="networkText">اسم الشبكة</div>
-
-        <img src="assets/qr.png" class="qr">
+      <div class="top-bar">
+        <img src="assets/logo.png" class="small-logo">
+        <div>
+          <h2>اسلام نت بلس</h2>
+          <p>كبينة الواي فاي</p>
+        </div>
       </div>
+
+      <div class="content-grid">
+
+        <div class="left-side">
+          <img src="assets/wifi-icon.jpg" class="wifi-icon">
+          <h3>اشترك بسهولة</h3>
+          <p>اختر شبكتك وابدأ خلال لحظات</p>
+
+          <div class="info-card">
+            <span>📶 الشبكة:</span>
+            <strong id="networkText">اسم الشبكة</strong>
+          </div>
+
+          <div class="info-card">
+            <span>📱 الهاتف:</span>
+            <strong id="phoneText">777000000</strong>
+          </div>
+
+          <img src="assets/qr.png" class="qr">
+        </div>
+
+        <div class="right-side">
+          <img src="assets/home-ui.jpg" class="phone-ui">
+          <img src="assets/wifi-ui.jpg" class="wifi-ui">
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
-    <button id="downloadBtn" onclick="downloadImage()">تحميل التصميم</button>
-  </div>
+</div>
 
-  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-  <script src="script.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
